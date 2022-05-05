@@ -1,4 +1,4 @@
-Feature: Does bunker creation work, do created bunkers have the correct data?
+Feature: Bunker creation
     Do bunkers get created properly? Do created bunkers have the data that was provided?
 
     Scenario: Creating a single bunker

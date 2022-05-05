@@ -1,9 +1,9 @@
 const { When, Then, Given } = require("@cucumber/cucumber");
 const { assert } = require("chai");
-const deleteBunker = require("../../../../middleware/bunker/deleteBunker");
-let { repository } = require("./bunker_common");
+const deleteFood = require("../../../../../middleware/food/deleteFood");
+let { repository } = require("./food_common");
 
-Given("Bunker by ID {int} exists", function (int) {
+Given("Food by ID {int} exists", function (int) {
   repository.push({
     _id: int,
     name: `name${int}`,
@@ -15,7 +15,7 @@ Given("Bunker by ID {int} exists", function (int) {
   });
 });
 
-Given("{int} bunkers exist", function (int) {
+Given("{int} foods exist", function (int) {
   for (let i = 0; i < int; i++)
     repository.push({
       _id: i,
@@ -28,11 +28,11 @@ Given("{int} bunkers exist", function (int) {
     });
 });
 
-When("I delete bunker by ID {int}", function (int) {
-  let del_func = deleteBunker({
-    BunkerModel: {
+When("I delete food by ID {int}", function (int) {
+  let del_func = deleteFood({
+    FoodModel: {
       deleteOne: (obj, next) => {
-        let index = repository.findIndex((bunker) => bunker._id === obj._id);
+        let index = repository.findIndex((food) => food._id.toString() === obj._id.toString());
         if (index != -1) {
           repository.splice(index, 1);
         }
@@ -43,7 +43,7 @@ When("I delete bunker by ID {int}", function (int) {
   del_func(
     {
       params: {
-        bunkerid: int,
+        foodid: int,
       },
     },
     {},

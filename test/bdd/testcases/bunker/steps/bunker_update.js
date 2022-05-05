@@ -1,6 +1,6 @@
 const { When, Then, Given } = require("@cucumber/cucumber");
 const { assert } = require("chai");
-const saveBunker = require("../../../../middleware/bunker/saveBunker");
+const saveBunker = require("../../../../../middleware/bunker/saveBunker");
 let { repository, Bunker } = require("./bunker_common");
 
 When(

@@ -1,4 +1,4 @@
-Feature: Does bunker get deleted when it is being deleted?
+Feature: Bunker deletion
     If a bunker is to be deleted, it is removed from the system when the delete is called.
 
     Scenario: Bunker by ID exists, delete should happen

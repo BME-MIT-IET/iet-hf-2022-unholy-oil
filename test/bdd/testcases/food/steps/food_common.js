@@ -5,18 +5,17 @@ function setid(newid) {
   id = newid
 }
 
-class Bunker {
+class Food {
   name;
-  adress;
-  capacity;
-  stock_dur = 0;
-  nextExpDate = "";
-  stock = [];
+  kcal;
+  lasts;
   _id;
 
   save(callback) {
-    this._id = id;
-    repository.push(this);
+    if (!repository.some(food => food._id.toString() === this._id)) {
+      this._id = id;
+      repository.push(this);
+    }
     callback();
   }
 }
@@ -24,5 +23,5 @@ class Bunker {
 module.exports = {
   setid: setid,
   repository: repository,
-  Bunker: Bunker
+  Food: Food
 };

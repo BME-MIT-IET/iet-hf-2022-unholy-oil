@@ -1,4 +1,4 @@
-Feature: Does bunker update work?
+Feature: Bunker update
     Does updating fields of the bunkers work? Do the new field values get displayed?
 
     Scenario: Modifying the only bunker in the system

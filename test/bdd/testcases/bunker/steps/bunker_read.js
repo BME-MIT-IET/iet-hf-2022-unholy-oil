@@ -1,7 +1,7 @@
 const { When, Then, Given } = require("@cucumber/cucumber");
 const { assert } = require("chai");
-const getBunker = require("../../../../middleware/bunker/getBunker");
-const getBunkerList = require("../../../../middleware/bunker/getBunkerList");
+const getBunker = require("../../../../../middleware/bunker/getBunker");
+const getBunkerList = require("../../../../../middleware/bunker/getBunkerList");
 let { repository } = require("./bunker_common");
 
 function getBunkerById(id) {
@@ -111,6 +111,24 @@ Then("The bunker with ID {int} has capacity {int}", function (int, int2) {
   );
 });
 
+Then("The bunker with ID {int} has stock_dur {int}", function (int, int2) {
+  let bunker = getBunkerById(int);
+  assert.equal(
+    bunker["stock_dur"],
+    int2,
+    `Bunker with id ${int}'s stock_dur did not equal ${int2}, but ${bunker["stock_dur"]}`
+  );
+});
+
+Then("The bunker with ID {int} has nextExpDate {string}", function (int, string) {
+  let bunker = getBunkerById(int);
+  assert.equal(
+    bunker["nextExpDate"],
+    string,
+    `Bunker with id ${int}'s nextExpDate did not equal ${string}, but ${bunker["nextExpDate"]}`
+  );
+});
+
 Then("There are {int} bunkers", function (int) {
   assert.lengthOf(
     getAllBunkers(),
@@ -130,9 +148,10 @@ Then("There is no bunker with ID {int}", function (int) {
 });
 
 Then("There is a bunker with ID {int}", function (int) {
-  assert.include(
-    getAllBunkers(),
-    { _id: int },
+  assert(
+    getAllBunkers().some(
+        bunker => bunker._id.toString() === int.toString()
+    ),
     `Repository has no bunker with id ${int}`
   );
 });
