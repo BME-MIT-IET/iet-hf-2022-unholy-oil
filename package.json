@@ -4,9 +4,8 @@
   "description": "VITMAV42 homework",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive",
-    "nodemon": "nodemon index.js",
-    "test-cucumber": "cucumber-js test/bdd"
+    "test": "mocha test/unit --recursive && cucumber-js test/bdd",
+    "nodemon": "nodemon index.js"
   },
   "author": "EQN34F",
   "license": "ISC",
