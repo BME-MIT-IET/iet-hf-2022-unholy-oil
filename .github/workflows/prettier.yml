@@ -1,0 +1,28 @@
+name: prettier
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-prettier:
+    name: Run prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run prettier
+        uses: wearerequired/lint-action@v2
+        with:
+          prettier: true
