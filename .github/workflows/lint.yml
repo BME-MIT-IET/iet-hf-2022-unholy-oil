@@ -1,13 +1,17 @@
-name: eslint
+name: Lint
 
 on:
+  workflow_dispatch:
+  push:
+    branches:
+      - ${{ github.event.repository.default_branch }}
   pull_request:
     branches:
-      - master
+      - ${{ github.event.repository.default_branch }}
 
 jobs:
-  run-eslint:
-    name: Run eslint
+  run-linters:
+    name: Run linters
     runs-on: ubuntu-latest
 
     steps:
@@ -19,13 +23,11 @@ jobs:
         with:
           node-version: 12
 
-      - name: Upgrade NPM
-        run: npm install -g npm
-
       - name: Install Node.js dependencies
         run: npm ci
 
-      - name: Run eslint
+      - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
+          prettier: true
