@@ -4,7 +4,7 @@
   "description": "VITMAV42 homework",
   "main": "index.js",
   "scripts": {
-    "test:mocha": "mocha test/unit --recursive",
+    "test:mocha": "DOTENV_CONFIG_PATH=.test.env mocha -r dotenv/config  test/unit --recursive ",
     "test:cucumber": "cucumber-js test/bdd",
     "test:ui": "",
     "lint:eslint": "eslint --ext .js .",
