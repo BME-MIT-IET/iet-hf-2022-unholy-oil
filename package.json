@@ -7,6 +7,10 @@
     "test:mocha": "mocha test/unit --recursive",
     "test:cucumber": "cucumber-js test/bdd",
     "test:ui": "",
+    "lint:eslint": "eslint --ext .js .",
+    "lint:prettier": "prettier --check .",
+    "lint": "run-s lint:*",
+    "format": "prettier --write .",
     "test": "run-s test:*",
     "nodemon": "nodemon index.js"
   },
@@ -24,7 +28,7 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "2.6.2"
+    "prettier": "^2.6.2",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.16",
