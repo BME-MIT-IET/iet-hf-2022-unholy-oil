@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: 12
 
+      - name: Upgrade NPM
+        run: npm install -g npm
+
       - name: Install Node.js dependencies
         run: npm ci
 
