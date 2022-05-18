@@ -9,8 +9,8 @@ illetve a bunkerekben a maximum elszállásolható emberek és a raktáron lév�
 
 ## Megvalósított feladatok
 
-* Build keretrendszer beüzemelése (Heroku & GitHub Actions)
-* Statikus analízis eszköz futtatása és jelzett hibák átnézése (Sonar Cloud & Prettier & ESLint)
-* Deployment segítése (Docker & példa docker-compose file)
-* BDD tesztek készítése (Cucumber)
-* UI tesztek készítése (Testcafe framework)
+- Build keretrendszer beüzemelése (Heroku & GitHub Actions)
+- Statikus analízis eszköz futtatása és jelzett hibák átnézése (Sonar Cloud & Prettier & ESLint)
+- Deployment segítése (Docker & példa docker-compose file)
+- BDD tesztek készítése (Cucumber)
+- UI tesztek készítése (Testcafe framework)
