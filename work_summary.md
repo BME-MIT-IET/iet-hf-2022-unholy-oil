@@ -17,4 +17,20 @@
 
 ## bluebird182
 
-## gergoradeczki
+## Radeczki Gergő István (GitHub: gergoradeczki, Neptun: CZDRF4)
+
+- CI beüzemelése (GitHub Actions) (5h)
+  - GitHub Actions dokumentáció olvasása
+  - Prettier action beüzemelése
+  - ESLint action beüzemelése
+  - Cucumber action beüzemelése
+  - NodeJS NPM hiba javítása
+  - YAML fájl szintaktikai hiba javítás
+- Statikus analízis eszköz futtatása és jelzett hibák átnézése (Prettier, ESLint) (5h)
+  - Prettier dokumentáció olvasás
+  - ESLint dokumentáció olvasás
+  - Prettier és ESLint beüzemelése
+  - Prettier és ESLint konfigurálása, összekapcsolása
+  - VSCode konfigurációs fájl készítése
+- Pull Request review-zása (1.5h)
+- Konzultáció (2.5h)
