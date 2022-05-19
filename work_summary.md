@@ -7,8 +7,9 @@
   - Cucumber framework-öt használva tesztesetek megírása (~1,5h)
     - Ebből 9 egyszerűbb
     - 2 komplexebb
-  - Cucumber feature-ök lépéseinek implementálása (~ 10h)
+  - Cucumber feature-ök lépéseinek implementálása (~10h)
 - Különböző code review-k (~1h)
+- Csapat meetingek (~1h)
 
 ## bbucsy
 
